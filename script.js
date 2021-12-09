@@ -2,6 +2,16 @@
 var generateBtn = document.querySelector("#generate");
 var numberOfChars = 0;
 var charsToInclude = [];
+var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var special = ['!', '@', '#', '$', '%', '&', '*'];
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.ceil(max);
+  return Math.floor(math.random()*(max-min) + min);
+}
 
 function generatePassword() {
   numberOfChars = window.prompt("Enter a number of characters for your password between 8 and 128:"); 
@@ -20,13 +30,20 @@ function generatePassword() {
     charsToInclude[3] = window.confirm("Include special characters?");
   }
   if(charsToInclude[3] == true || charsToInclude[3] == false) {
-    window.alert(charsToInclude.length);
     window.alert(charsToInclude);
-    console.log(charsToInclude);
   }
+  var lowSelIndex = getRandomInt(0, lowerCase.length);
+  var lowSel = lowerCase[lowSelIndex];
+
+  var upSelIndex = getRandomInt(0, upperCase.length);
+  var upSel = upperCase[upSelIndex];
+
+  var numSelIndex = getRandomInt(0, numeric.length);
+  var numSel = numeric[numSelIndex];
+
+  var specSelIndex = getRandomInt(0, special.length);
+  var specSel = special[specSelIndex];
 }
-
-
   
 
 
