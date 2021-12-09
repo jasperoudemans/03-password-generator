@@ -10,7 +10,7 @@ var special = ['!', '@', '#', '$', '%', '&', '*'];
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.ceil(max);
-  return Math.floor(math.random()*(max-min) + min);
+  return Math.floor(Math.random()*(max-min) + min);
 }
 
 function generatePassword() {
@@ -43,12 +43,9 @@ function generatePassword() {
 
   var specSelIndex = getRandomInt(0, special.length);
   var specSel = special[specSelIndex];
+
+  return window.alert(lowSel + upSel + numSel + specSel); 
 }
-  
-
-
-  
-
 
 // Write password to the #password input
 function writePassword() {
