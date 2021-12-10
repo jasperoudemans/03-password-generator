@@ -2,11 +2,12 @@
 
 ## Description
 
-This is an attempt at a password generator. It doesn't quite work but it gets pretty close. 
+This is an attempt at a password generator. It doesn't quite work but it gets somewhat close. 
 Window prompts ask the user for an input of the number of characters followed by other prompts regarding
-what kind of characters to include. The application returns a series of commas equal to the number of characters
-chosen by the user minus one. I have not managed to make the password contain characters selected from my arrays
-of characters to replace the commas. 
+what kind of characters to include. The application first alerts the user to the sequence of true and 
+false statements which corresponds to their responses to the prompts, then returns a line of commas 
+equal to the number of characters chosen by the user minus one. I have not managed to make the password 
+contain characters selected from my arrays of characters to replace the commas. 
 
 ## Screenshot of deployed application
 
